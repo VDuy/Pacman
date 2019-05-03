@@ -184,7 +184,7 @@ class GamePanel extends JPanel {
             g.drawString("YOU LOSE", 75, 100);
             g.setColor(Color.cyan);
             g.setColor(Color.red);
-            g.drawString("Score " + score, 130, 320);
+            g.drawString("Score " + score, 120, 330);
             g.setFont(new Font("Arial", Font.BOLD, 20));
             g.drawString("Space to restart", 180, 200);
         } else { // normal
