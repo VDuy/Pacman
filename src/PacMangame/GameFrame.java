@@ -395,7 +395,7 @@ class GamePanel extends JPanel {
     }
 
     public void saveScore(Map map) throws Exception {
-        String filename = "C:\\Users\\vducd\\GameJava\\src\\PacMangame\\score.txt";
+        String filename = "C:\\Users\\vducd\\IntelliJ IDEA Community Edition 2018.2.3\\GameJava\\src\\PacMangame\\\\score.txt";
         int[] data = new int[6];
         Scanner sc = new Scanner(new File(filename));
         for (int i = 0; i < 5; i++) {

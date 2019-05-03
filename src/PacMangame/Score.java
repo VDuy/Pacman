@@ -25,10 +25,11 @@ public class Score extends javax.swing.JFrame {
         initComponents();
         this.setDefaultCloseOperation(HIDE_ON_CLOSE);
         try {
-            Scanner sc = new Scanner(new File("C:\\Users\\vducd\\GameJava\\src\\PacMangame\\score.txt"));
+            Scanner sc = new Scanner(new File("C:\\Users\\vducd\\IntelliJ IDEA Community Edition 2018.2.3\\GameJava\\src\\PacMangame\\\\score.txt"));
             for (int i = 0; i < 5; i++) {
                 score[i] = sc.nextInt();
-                System.out.println(score[i]);
+
+//               System.out.println(score[i]);
             }
             score1.setText("1. " + score[0]);
             score2.setText("2. " + score[1]);
