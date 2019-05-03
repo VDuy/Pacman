@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdeab8d7-9038-4be2-84b4-979196ff356d" name="Default Changelist" comment="" />
+    <list default="true" id="cdeab8d7-9038-4be2-84b4-979196ff356d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PacMangame/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PacMangame/Score.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,13 +38,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="413" />
+          <entry key="java" value="443" />
           <entry key="txt" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="413" />
+          <entry key="JAVA" value="443" />
           <entry key="PLAIN_TEXT" value="25" />
         </counts>
       </usages-collector>
@@ -86,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PacMangame/Score.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="22" selection-start-line="22" selection-end-line="23" />
+            <state relative-caret-position="136">
+              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
               <folding>
                 <element signature="e#5613#5614#0" expanded="true" />
                 <element signature="e#5673#5674#0" expanded="true" />
@@ -106,6 +109,9 @@
       <replace>map</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -113,8 +119,8 @@
         <option value="$PROJECT_DIR$/src/PacMangame/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/PacMangame/ArrayEnemy.java" />
         <option value="$PROJECT_DIR$/src/PacMangame/GameFrame.java" />
-        <option value="$PROJECT_DIR$/src/PacMangame/Score.java" />
         <option value="$PROJECT_DIR$/src/PacMangame/score.txt" />
+        <option value="$PROJECT_DIR$/src/PacMangame/Score.java" />
       </list>
     </option>
   </component>
@@ -138,6 +144,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -179,7 +186,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="draw P&#9;PSI&#9;JAVA://PacMangame.GamePanel#drawPacMan&#10;isnhap&#9;PSI&#9;JAVA://PacMangame.GamePanel#isNhapnhay" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556863552352" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556864365957" />
     <property name="last_opened_file_path" value="$USER_HOME$/GameJavanangcao" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -388,8 +395,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PacMangame/Score.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="22" selection-start-line="22" selection-end-line="23" />
+        <state relative-caret-position="136">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding>
             <element signature="e#5613#5614#0" expanded="true" />
             <element signature="e#5673#5674#0" expanded="true" />

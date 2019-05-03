@@ -19,6 +19,8 @@ public class Score extends javax.swing.JFrame {
     private javax.swing.JLabel score5;
     int[] score = new int[5];
 
+// cai nay vua moi viet them
+
     public Score() {
         initComponents();
         this.setDefaultCloseOperation(HIDE_ON_CLOSE);
