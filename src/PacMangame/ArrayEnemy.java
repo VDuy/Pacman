@@ -30,7 +30,7 @@ public class ArrayEnemy {
                 switch (allEnemy.get(i).direct) {
                     case 0:
                         if (allEnemy.get(i).moveDown()) {
-                            allEnemy.get(i).y++;;
+                            allEnemy.get(i).y++;
                             moved = true;
                         } else {
                             allEnemy.get(i).direct = (int) (Math.random() * 4);
@@ -38,7 +38,7 @@ public class ArrayEnemy {
                         break;
                     case 1:
                         if (allEnemy.get(i).moveUp()) {
-                            allEnemy.get(i).y--;;
+                            allEnemy.get(i).y--;
                             moved = true;
                         } else {
                             allEnemy.get(i).direct = (int) (Math.random() * 4);
@@ -46,7 +46,7 @@ public class ArrayEnemy {
                         break;
                     case 2:
                         if (allEnemy.get(i).moveLeft()) {
-                            allEnemy.get(i).x--;;
+                            allEnemy.get(i).x--;
                             moved = true;
                         } else {
                             allEnemy.get(i).direct = (int) (Math.random() * 4);
@@ -54,7 +54,7 @@ public class ArrayEnemy {
                         break;
                     case 3:
                         if (allEnemy.get(i).moveRight()) {
-                            allEnemy.get(i).x++;;
+                            allEnemy.get(i).x++;
                             moved = true;
                         } else {
                             allEnemy.get(i).direct = (int) (Math.random() * 4);
