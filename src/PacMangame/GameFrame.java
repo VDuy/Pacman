@@ -18,7 +18,7 @@ public class GameFrame extends JFrame implements Runnable, KeyListener {
     Thread th;
     int flag = 1;
 
-    public GameFrame(Map map) throws Exception {
+    public GameFrame(Map map) {
         setSize(507, 508);
         setResizable(false);
         gamePanel = new GamePanel(map);
@@ -56,7 +56,6 @@ public class GameFrame extends JFrame implements Runnable, KeyListener {
                             flag += 1;
                             int sign = flag;
 
-//                                System.out.println("im the chaos knight");
                             gamePanel.Chaos = true;
                             for (int i = 0; i < gamePanel.arrayEnemy.allEnemy.size(); i++) {
                                 gamePanel.arrayEnemy.allEnemy.get(i).setKind(2);
@@ -68,7 +67,6 @@ public class GameFrame extends JFrame implements Runnable, KeyListener {
                                     gamePanel.arrayEnemy.allEnemy.get(i).setKind(1);
                                 }
 
-//                                    System.out.println("im not the chaos knight");
                                 gamePanel.Chaos = false;
                             }
                         } catch (InterruptedException ex) {
@@ -152,18 +150,17 @@ class GamePanel extends JPanel {
     int countPacMan = 0;
 
     //khởi tạo
-    public GamePanel(Map map) throws Exception {
+    public GamePanel(Map map) {
 
         status = ALIVE;
         this.map = map;
         this.setSize(500, 500);
-        arrayFood = map instanceof Map ? new ArrayFood(1) : new ArrayFood(2);
+        arrayFood =  new ArrayFood();
         arrayEnemy = new ArrayEnemy(this.map);
         pacMan = new ImageIcon(this.getClass().getResource("up.png")).getImage();
-        System.out.println("new panel");
+//        System.out.println("new panel");
 
     }
-
 
 
     // hàm vẽ lên frame, FPS = 100
@@ -220,63 +217,12 @@ class GamePanel extends JPanel {
                 }
             }
 
-            drawPacMan(g, x, y);
+            drawPacMan(g, x, y, Chaos);
             g.setColor(Color.yellow);
         }
 
-        if (Chaos) {
-            if (count % 5 == 0) { // FPS = 7miliseconds , FPS*5 là thời gian nhấp nháy (35 miliseconds)
-                vis = !vis;
-                count++;
 
-            } else {
-                count++;
-
-            }
-/*
-            if (vis) {
-                g.setColor(Color.BLACK);
-                g.fillRect(0, 0, 1000, 1000);
-            }
-*/
-
-                switch (direct) {
-                    case UP:
-                        pacMan = new ImageIcon(this.getClass().getResource("Upchaos.png")).getImage();
-                        break;
-                    case DOWN:
-                        pacMan = new ImageIcon(this.getClass().getResource("Downchaos.png")).getImage();
-                        break;
-                    case LEFT:
-                        pacMan = new ImageIcon(this.getClass().getResource("Leftchaos.png")).getImage();
-                        break;
-                    case RIGHT:
-                        pacMan = new ImageIcon(this.getClass().getResource("Rightchaos.png")).getImage();
-                        break;
-
-                    default:
-                        pacMan = new ImageIcon(this.getClass().getResource("Rightchaos.png")).getImage();
-                        break;
-
-                }
-
-            g.setColor(Color.red);
-            if (countPacMan % 100 != 0) {
-                visPacman = !visPacman;
-                countPacMan++;
-            } else {
-                countPacMan++;
-            }
-            if (visPacman) {
-                g.drawImage(pacMan, x - 15, y - 15, 30, 30, this);
-            } else {
-                g.fillOval(x - 15, y - 15, 30, 30);
-
-            }
-
-        }
     }
-
 
     // di chuyen, cap nhap vi tri của pacman
     public void update() throws Exception {
@@ -421,9 +367,29 @@ class GamePanel extends JPanel {
 
     }
 
-    private void drawPacMan(Graphics g, int x, int y) {
+    private void drawPacMan(Graphics g, int x, int y, boolean Chaos) {
+        if (Chaos) {
+            switch (direct) {
+                case UP:
+                    pacMan = new ImageIcon(this.getClass().getResource("Upchaos.png")).getImage();
+                    break;
+                case DOWN:
+                    pacMan = new ImageIcon(this.getClass().getResource("Downchaos.png")).getImage();
+                    break;
+                case LEFT:
+                    pacMan = new ImageIcon(this.getClass().getResource("Leftchaos.png")).getImage();
+                    break;
+                case RIGHT:
+                    pacMan = new ImageIcon(this.getClass().getResource("Rightchaos.png")).getImage();
+                    break;
 
-        switch (direct) {
+                default:
+                    pacMan = new ImageIcon(this.getClass().getResource("Rightchaos.png")).getImage();
+                    break;
+
+            }
+        }
+         else switch (direct) {
             case UP:
                 pacMan = new ImageIcon(this.getClass().getResource("up.png")).getImage();
                 break;
@@ -440,8 +406,9 @@ class GamePanel extends JPanel {
                 pacMan = new ImageIcon(this.getClass().getResource("right.png")).getImage();
                 break;
         }
-        g.setColor(Color.yellow);
-        if (countPacMan % 100 != 0) {
+
+        g.setColor(Chaos ? Color.red : Color.yellow);
+        if (countPacMan % 10 == 0) {
             visPacman = !visPacman;
             countPacMan++;
         } else {

@@ -4,9 +4,8 @@ import java.awt.Image;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 public class ArrayEnemy {
-    int score = 0;
 
-    ArrayList<Enemy> allEnemy;
+ ArrayList<Enemy> allEnemy;
     Map map;
 
     ArrayEnemy(Map map) {
@@ -16,7 +15,7 @@ public class ArrayEnemy {
         allEnemy.add(new Enemy(400, 20, 1, "ghost2.png"));
         allEnemy.add(new Enemy(20, 430, 1, "ghost3.png"));
         allEnemy.add(new Enemy(450, 430, 1, "ghost4.png"));
-     //   allEnemy.add(new Enemy(10, 240, 1, "ghost5.png"));
+
 
     }
 
