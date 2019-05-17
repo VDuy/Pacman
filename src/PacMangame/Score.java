@@ -60,25 +60,20 @@ public class Score extends javax.swing.JFrame {
         map1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
-                 }
+            }
         });
 
         map2.setText("Map 2");
         map2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                 }
+            }
         });
 
-        score1.setText("1. 0");
-
-        score4.setText("4. 0");
-
-        score2.setText("2. 0");
-
-        score5.setText("5. 0");
-
-        score3.setText("3. 0");
-
+        score1.setText("1. ");
+        score2.setText("2. ");
+        score3.setText("3. ");
+        score4.setText("4. ");
+        score5.setText("5. ");
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -116,8 +111,8 @@ public class Score extends javax.swing.JFrame {
                                 .addComponent(score5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(67, Short.MAX_VALUE))
         );
-    map2.setVisible(false);
-    map1.setVisible(false);
+        map2.setVisible(false);
+        map1.setVisible(false);
         pack();
 
 

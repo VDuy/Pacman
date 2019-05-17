@@ -291,7 +291,7 @@ class GamePanel extends JPanel {
     }
 
     // lọc những trường hợp không di chuyển được
-    void getAKey(int keyCode) throws Exception {
+    void getAKey(int keyCode)  {
 
         switch (keyCode) {
             case KeyEvent.VK_UP:
@@ -389,7 +389,7 @@ class GamePanel extends JPanel {
 
             }
         }
-         else switch (direct) {
+        else switch (direct) {
             case UP:
                 pacMan = new ImageIcon(this.getClass().getResource("up.png")).getImage();
                 break;

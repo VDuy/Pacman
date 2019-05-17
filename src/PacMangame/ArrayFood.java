@@ -24,7 +24,6 @@ public class ArrayFood {
     public ArrayFood() {
         allFood = new ArrayList<>();
 
-
         addNew(2, 2, 2);
         addNew(2, 5, 1);
         addNew(2, 9, 1);
@@ -101,7 +100,7 @@ public class ArrayFood {
         addNew(21, 42, 1);
         addNew(21, 45, 1);
         addNew(24, 5, 2);
-        addNew(24, 18, 1);
+        addNew(24, 18, 2);
         addNew(24, 21, 1);
         addNew(24, 45, 2);
 
