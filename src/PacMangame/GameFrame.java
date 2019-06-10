@@ -145,7 +145,7 @@ class GamePanel extends JPanel {
     int direct = DOWN;
     int score = 0;
     boolean Chaos;
-    boolean vis;
+   // boolean vis;
     boolean visPacman = true;
     int countPacMan = 0;
 
@@ -173,18 +173,20 @@ class GamePanel extends JPanel {
             g.setFont(new Font("Arial", Font.BOLD, 50));
             g.setColor(Color.red);
             g.drawString("Score " + score, 170, 350);
-
             return;
-        } else if (status == DEAD) {
+        }
+
+         else if (status == DEAD) {
             g.setColor(Color.red);
             g.setFont(new Font("Arial", Font.BOLD, 70));
-            g.drawString("YOU LOSE", 75, 100);
-            g.setColor(Color.cyan);
+            g.drawString("YOU LOSE", 80, 100);
+
             g.setColor(Color.red);
             g.drawString("Score " + score, 120, 330);
             g.setFont(new Font("Arial", Font.BOLD, 20));
             g.drawString("Space to restart", 180, 200);
-        } else { // normal
+        }
+        else { // normal
             g.setColor(Color.black); // color of background
             g.fillRect(0, 0, this.getSize().width, this.getSize().height);
 
@@ -193,7 +195,7 @@ class GamePanel extends JPanel {
             for (int i = 0; i < 50; i++) {
                 for (int j = 0; j < 50; j++) {
                     if (map.block[i][j]) {
-                        g.fill3DRect(i * 10, j * 10, 10, 10, true);
+                        g.fill3DRect(i * 10,j * 10, 10, 10, true);
                     }
                 }
             }
@@ -216,7 +218,6 @@ class GamePanel extends JPanel {
 
                 }
             }
-
             drawPacMan(g, x, y, Chaos);
             g.setColor(Color.yellow);
         }
